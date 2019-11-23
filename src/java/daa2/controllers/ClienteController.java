@@ -27,12 +27,12 @@ public class ClienteController {
     private EntityManager getEntityManager() {
         
         if (emf == null) {
-            emf = Persistence.createEntityManagerFactory("LaNonnaPU");
+            emf = Persistence.createEntityManagerFactory("AvenSACPU");
         }
         return emf.createEntityManager();
     }
     
-    @RequestMapping("ListarClientes.htm")
+    @RequestMapping("clientes.htm")
     public ModelAndView Listar() {
         List<Cliente> clientes = new ArrayList<>();
         clientes = repo.findClienteEntities();

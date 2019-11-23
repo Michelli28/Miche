@@ -19,7 +19,7 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
-                <prop key="ListarClientes.htm">clienteController</prop>
+                <prop key="clientes.htm">clienteController</prop>
             </props>
         </property>
     </bean>
