@@ -26,6 +26,7 @@
                                 <th scope="col">Razón Social</th>
                                 <th scope="col">RUC</th>
                                 <th scope="col">Distrito</th>
+                                <th scope="col">Dirección</th>
                                 <th scope="col">Broker</th>
                                 <th scope="col">Usuario</th>
                                 <th scope="col">Contraseña</th>

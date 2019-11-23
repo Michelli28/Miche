@@ -9,7 +9,9 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -42,5 +44,18 @@ public class ClienteController {
         mv.setViewName("clientes");
         return mv;
     }
-
+    
+    @RequestMapping(value = "nuevocliente.htm", method = RequestMethod.GET)
+    public ModelAndView NuevoCliente() {
+        ModelAndView mv = new ModelAndView();
+        mv.addObject(new Cliente());
+        mv.setViewName("nuevocliente");
+        return mv;
+    }
+    
+    @RequestMapping(value = "nuevocliente.htm", method = RequestMethod.POST)
+    public ModelAndView NuevoCliente(@ModelAttribute ("cliente") Cliente c) throws Exception{
+        repo.create(c);
+        return new ModelAndView("redirect:/clientes.htm");
+    }
 }
