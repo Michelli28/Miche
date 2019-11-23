@@ -19,6 +19,7 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop>
+                <prop key="ListarClientes.htm">clienteController</prop>
             </props>
         </property>
     </bean>
@@ -34,5 +35,9 @@
     <bean name="indexController"
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index" />
+    
+    <bean name="clienteController"
+          class="daa2.controllers.ClienteController" />
+
 
 </beans>
