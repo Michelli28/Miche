@@ -54,7 +54,7 @@ public class ClienteController {
     }
     
     @RequestMapping(value = "nuevocliente.htm", method = RequestMethod.POST)
-    public ModelAndView NuevoCliente(@ModelAttribute ("cliente") Cliente c) throws Exception{
+    public ModelAndView NuevoCliente(@ModelAttribute("cliente") Cliente c) throws Exception{
         repo.create(c);
         return new ModelAndView("redirect:/clientes.htm");
     }
